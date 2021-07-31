@@ -1,24 +1,33 @@
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 
-
 class Queue:
     def __init__(self, capacity: int) -> None:
-        # TODO - you fill in here.
-        return
+        self._entries = [None] * capacity
+        self._head = 0
+        self._tail = 0
+        self._num_elems = 0
 
     def enqueue(self, x: int) -> None:
-        # TODO - you fill in here.
-        return
+        def resize():
+            if self._head == self._tail and self._tail is not None:
+                self._tail = len(self._entries)
+                self._entries = self._entries[self._head:] + self._entries[:self._head] + [None for _ in self._entries]
+                self._head = 0
+
+        self._entries[self._tail] = x
+        self._tail = (self._tail + 1) % len(self._entries)
+        self._num_elems += 1
+        resize()
 
     def dequeue(self) -> int:
-        # TODO - you fill in here.
-        return 0
+        head = self._entries[self._head]
+        self._head = (self._head + 1) % len(self._entries)
+        self._num_elems -= 1
+        return head
 
     def size(self) -> int:
-        # TODO - you fill in here.
-        return 0
-
+        return self._num_elems
 
 def queue_tester(ops):
     q = Queue(1)

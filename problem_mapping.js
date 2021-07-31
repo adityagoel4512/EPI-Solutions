@@ -896,7 +896,7 @@ problem_mapping = {
                 "total": 108
             },
             "Python: evaluate_rpn.py": {
-                "passed": 0,
+                "passed": 108,
                 "total": 108
             }
         },
@@ -910,7 +910,7 @@ problem_mapping = {
                 "total": 78
             },
             "Python: is_valid_parenthesization.py": {
-                "passed": 0,
+                "passed": 78,
                 "total": 78
             }
         },
@@ -924,7 +924,7 @@ problem_mapping = {
                 "total": 255
             },
             "Python: directory_path_normalization.py": {
-                "passed": 0,
+                "passed": 255,
                 "total": 255
             }
         },
@@ -938,7 +938,7 @@ problem_mapping = {
                 "total": 101
             },
             "Python: sunset_view.py": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             }
         },
@@ -966,7 +966,7 @@ problem_mapping = {
                 "total": 65
             },
             "Python: circular_queue.py": {
-                "passed": 0,
+                "passed": 65,
                 "total": 65
             }
         },
@@ -980,7 +980,7 @@ problem_mapping = {
                 "total": 65
             },
             "Python: queue_from_stacks.py": {
-                "passed": 0,
+                "passed": 65,
                 "total": 65
             }
         },
@@ -994,7 +994,7 @@ problem_mapping = {
                 "total": 201
             },
             "Python: queue_with_max.py": {
-                "passed": 0,
+                "passed": 201,
                 "total": 201
             }
         }
@@ -1010,7 +1010,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: is_tree_balanced.py": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             }
         },
@@ -1038,7 +1038,7 @@ problem_mapping = {
                 "total": 948
             },
             "Python: lowest_common_ancestor.py": {
-                "passed": 0,
+                "passed": 948,
                 "total": 948
             }
         },
@@ -1066,7 +1066,7 @@ problem_mapping = {
                 "total": 3849
             },
             "Python: sum_root_to_leaf.py": {
-                "passed": 0,
+                "passed": 3849,
                 "total": 3849
             }
         },
@@ -1094,7 +1094,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: tree_inorder.py": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             }
         },
@@ -1164,7 +1164,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: tree_from_preorder_with_null.py": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             }
         },
@@ -1192,7 +1192,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: tree_exterior.py": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             }
         },
@@ -1206,7 +1206,7 @@ problem_mapping = {
                 "total": 10
             },
             "Python: tree_right_sibling.py": {
-                "passed": 0,
+                "passed": 10,
                 "total": 10
             }
         }
@@ -1222,7 +1222,7 @@ problem_mapping = {
                 "total": 152
             },
             "Python: sorted_arrays_merge.py": {
-                "passed": 0,
+                "passed": 152,
                 "total": 152
             }
         },
@@ -1236,7 +1236,7 @@ problem_mapping = {
                 "total": 203
             },
             "Python: sort_increasing_decreasing_array.py": {
-                "passed": 0,
+                "passed": 203,
                 "total": 203
             }
         },
@@ -1250,7 +1250,7 @@ problem_mapping = {
                 "total": 101
             },
             "Python: sort_almost_sorted_array.py": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             }
         },
@@ -1264,7 +1264,7 @@ problem_mapping = {
                 "total": 51
             },
             "Python: k_closest_stars.py": {
-                "passed": 0,
+                "passed": 51,
                 "total": 51
             }
         },
@@ -1278,7 +1278,7 @@ problem_mapping = {
                 "total": 55
             },
             "Python: online_median.py": {
-                "passed": 0,
+                "passed": 55,
                 "total": 55
             }
         },
@@ -1292,7 +1292,7 @@ problem_mapping = {
                 "total": 102
             },
             "Python: k_largest_in_heap.py": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             }
         }
@@ -1336,7 +1336,7 @@ problem_mapping = {
                 "total": 307
             },
             "Python: search_shifted_sorted_array.py": {
-                "passed": 0,
+                "passed": 307,
                 "total": 307
             }
         },
@@ -1350,7 +1350,7 @@ problem_mapping = {
                 "total": 2000
             },
             "Python: int_square_root.py": {
-                "passed": 0,
+                "passed": 2000,
                 "total": 2000
             }
         },
@@ -1378,7 +1378,7 @@ problem_mapping = {
                 "total": 194
             },
             "Python: search_row_col_sorted_matrix.py": {
-                "passed": 0,
+                "passed": 194,
                 "total": 194
             }
         },
@@ -1478,7 +1478,7 @@ problem_mapping = {
                 "total": 212
             },
             "Python: is_anonymous_letter_constructible.py": {
-                "passed": 0,
+                "passed": 212,
                 "total": 212
             }
         },
@@ -1492,7 +1492,7 @@ problem_mapping = {
                 "total": 101
             },
             "Python: lru_cache.py": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             }
         },

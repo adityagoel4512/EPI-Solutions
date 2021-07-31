@@ -27,10 +27,23 @@ class Star:
         return math.isclose(self.distance, rhs.distance)
 
 
+import heapq
 def find_closest_k_stars(stars: Iterator[Star], k: int) -> List[Star]:
-    # TODO - you fill in here.
-    return []
+    max_heap = []
+    for _ in range(k):
+        try:
+            star = next(stars)
+            heapq.heappush(max_heap, (-star.distance, star))
+        except StopIteration:
+            break
 
+    # max_heap stores the k closes stars albeit as a maxheap. the max_heap[0] is the kth furtherst star
+    for star in stars:
+        max_dist, max_dist_star = max_heap[0]
+        if star.distance < -max_dist:
+            heapq.heapreplace(max_heap, (-star.distance, star))
+
+    return [ds[1] for ds in heapq.nlargest(k, max_heap, key=lambda ds: ds[0])]
 
 def comp(expected_output, output):
     if len(output) != len(expected_output):
