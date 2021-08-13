@@ -8,10 +8,15 @@ from test_framework.test_utils import enable_executor_hook
 
 Person = collections.namedtuple('Person', ('age', 'name'))
 
-
+from collections import Counter
+from collections import defaultdict
 def group_by_age(people: List[Person]) -> None:
-    # TODO - you fill in here.
-    return
+    grouped = defaultdict(list)
+    for person in people:
+        grouped[person.age].append(person.name)
+
+    print(grouped)
+    people = [Person(a, n) for a in grouped for n in grouped[a]]
 
 
 @enable_executor_hook

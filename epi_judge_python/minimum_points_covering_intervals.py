@@ -9,9 +9,20 @@ Interval = collections.namedtuple('Interval', ('left', 'right'))
 
 
 def find_minimum_visits(intervals: List[Interval]) -> int:
-    # TODO - you fill in here.
-    return 0
-
+    # brute force => for increasing number of visits i = 1, ...: find all groups of that length and check if they cover every interval
+    # d[i] =>
+    intervals.sort(key=lambda interval: interval.right)
+    # examine right points
+    #[0, 3], [3, 4], [2, 6], [6, 9] -> [0, 3], [2, 6], [3, 4], [6, 9]
+    result = 0
+    i = 0
+    while i < len(intervals):
+        right = intervals[i].right
+        while i != len(intervals)-1 and right >= intervals[i+1].left:
+            i += 1
+        i += 1
+        result += 1
+    return result
 
 @enable_executor_hook
 def find_minimum_visits_wrapper(executor, A):

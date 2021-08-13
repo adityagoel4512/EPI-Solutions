@@ -9,9 +9,14 @@ NUM_PEGS = 3
 
 
 def compute_tower_hanoi(num_rings: int) -> List[List[int]]:
-    # TODO - you fill in here.
-    return []
-
+    def move(source, target, aux, n):
+        if n > 0:
+            move(source, aux, target, n-1)
+            result.append([source, target])
+            move(aux, target, source, n-1)
+    result = []
+    move(0, 2, 1, num_rings)
+    return result
 
 @enable_executor_hook
 def compute_tower_hanoi_wrapper(executor, num_rings):

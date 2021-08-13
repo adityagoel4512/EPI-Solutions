@@ -16,10 +16,15 @@ class Name:
 
 
 def eliminate_duplicate(A: List[Name]) -> None:
-    # TODO - you fill in here.
-    return
+    A.sort()
+    write_index = 0
+    for i, a in enumerate(A):
+        if i >= 1:
+            if A[i].first_name != A[i-1].first_name:
+                write_index += 1
 
-
+            A[write_index] = a
+    del A[write_index:]
 @enable_executor_hook
 def eliminate_duplicate_wrapper(executor, names):
     names = [Name(*x) for x in names]

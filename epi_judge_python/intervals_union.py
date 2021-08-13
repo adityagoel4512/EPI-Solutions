@@ -11,8 +11,16 @@ Interval = collections.namedtuple('Interval', ('left', 'right'))
 
 
 def union_of_intervals(intervals: List[Interval]) -> List[Interval]:
-    # TODO - you fill in here.
-    return []
+    sorted_intervals = sorted(intervals, key=lambda interval:(interval.left.val, not interval.left.is_closed))
+    # Every interval's left endpoint is <= the one after it, with closed ones taking precedence
+    result = [sorted_intervals[0]]
+    for interval in sorted_intervals[1:]:
+        if interval.left.val < result[-1].right.val or (interval.left.val == result[-1].right.val and (interval.left.is_closed or result[-1].right.is_closed)):
+            if result[-1].right.val < interval.right.val or (result[-1].right.val == interval.right.val and interval.right.is_closed):
+                result[-1] = Interval(result[-1].left, interval.right)
+        else:
+            result.append(interval)
+    return result
 
 
 @enable_executor_hook

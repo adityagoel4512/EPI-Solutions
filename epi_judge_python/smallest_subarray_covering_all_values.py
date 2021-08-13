@@ -6,13 +6,25 @@ from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
 
 Subarray = collections.namedtuple('Subarray', ('start', 'end'))
-
-
 def find_smallest_sequentially_covering_subset(paragraph: List[str],
                                                keywords: List[str]
                                                ) -> Subarray:
-    # TODO - you fill in here.
-    return Subarray(0, 0)
+    keyword_to_prev = dict(zip(keywords[1:], keywords))
+    keyword_subarray = {keyword:(None, None) for keyword in keywords}
+    # maintains for each keyword the last index it was at and the longest complete subarray
+    # length, complete meaning that it contains all preceding keywords
+
+    result = None
+    for i, word in enumerate(paragraph):
+        if word == keywords[0]:
+            keyword_subarray[word] = (i, 1)
+        elif word in keyword_to_prev:
+            prev_index, prev_length = keyword_subarray[keyword_to_prev[word]]
+            if prev_length is not None:
+                keyword_subarray[word] = (i, i-prev_index+prev_length)
+                if word == keywords[-1]:
+                    result = Subarray(i-keyword_subarray[word][1]+1, i) if result is None or keyword_subarray[word][1] < result.end-result.start+1 else result
+    return result
 
 
 @enable_executor_hook
