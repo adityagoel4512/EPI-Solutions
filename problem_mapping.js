@@ -1774,7 +1774,7 @@ problem_mapping = {
                 "total": 1005
             },
             "Python: find_salary_threshold.py": {
-                "passed": 0,
+                "passed": 1005,
                 "total": 1005
             }
         }
@@ -2408,7 +2408,7 @@ problem_mapping = {
                 "total": 201
             },
             "Python: majority_element.py": {
-                "passed": 0,
+                "passed": 201,
                 "total": 201
             }
         },
@@ -2422,7 +2422,7 @@ problem_mapping = {
                 "total": 202
             },
             "Python: refueling_schedule.py": {
-                "passed": 0,
+                "passed": 202,
                 "total": 202
             }
         },
@@ -2436,7 +2436,7 @@ problem_mapping = {
                 "total": 204
             },
             "Python: max_trapped_water.py": {
-                "passed": 0,
+                "passed": 204,
                 "total": 204
             }
         },
@@ -2466,7 +2466,7 @@ problem_mapping = {
                 "total": 101
             },
             "Python: search_maze.py": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             }
         },
@@ -2480,7 +2480,7 @@ problem_mapping = {
                 "total": 50
             },
             "Python: matrix_connected_regions.py": {
-                "passed": 0,
+                "passed": 50,
                 "total": 50
             }
         },
@@ -2536,7 +2536,7 @@ problem_mapping = {
                 "total": 85
             },
             "Python: is_circuit_wirable.py": {
-                "passed": 0,
+                "passed": 4,
                 "total": 85
             }
         },
@@ -2550,7 +2550,7 @@ problem_mapping = {
                 "total": 48
             },
             "Python: string_transformability.py": {
-                "passed": 0,
+                "passed": 48,
                 "total": 48
             }
         },

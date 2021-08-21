@@ -10,10 +10,31 @@ class GraphVertex:
         self.d = -1
         self.edges: List[GraphVertex] = []
 
+from collections import deque
 
 def is_any_placement_feasible(graph: List[GraphVertex]) -> bool:
-    # TODO - you fill in here.
-    return True
+    left, right = range(2)
+
+    def dfs(vertex, required_colour):
+        print(vertex.d, required_colour)
+        if vertex.d == required_colour:
+            return True
+        elif vertex.d != required_colour:
+            return False
+
+        # vertex.d == -1
+        vertex.d = required_colour
+
+        new_colour = left if required_colour == right else right
+        print(new_colour, vertex.edges)
+        for neighbour in vertex.edges:
+            print("neigbour", neighbour.d)
+            if not(dfs(neighbour, new_colour)):
+                return False
+
+        return True
+
+    return all(dfs(vertex, left) for vertex in graph if vertex.d == -1)
 
 
 @enable_executor_hook
